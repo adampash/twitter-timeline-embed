@@ -5,11 +5,21 @@
     <style>
       body {
         width: 100%;
+        margin: 0;
+        padding: 0;
       }
     </style>
   </head>
   <body>
-    <a class="twitter-timeline" data-dnt="true" href="/bubbaprog/timelines/437700866846384128" data-widget-id="571361841889439744">doge</a>
+    <a id="timeline" class="twitter-timeline" data-dnt="true" href="" data-widget-id=""></a>
+    <script>
+      var href = window.location.search.match(/\?href=(.*)&/)[1];
+      var id = window.location.search.match(/&id=(.*)&/)[1];
+      var word = window.location.search.match(/&word=(.*)$/)[1];
+      var el = document.getElementById('timeline');
+      el.setAttribute('href', href);
+      el.setAttribute('data-widget-id', id);
+    </script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </body>
 </html>
